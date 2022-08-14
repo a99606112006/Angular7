@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+    <div class="list-group list-group-flush border-bottom scrollarea">
+      <div class="list-group-item list-group-item-action py-3 lh-tight"
+           *ngFor="let msg of service.list"
+      >
+        <div *ngIf="msg.user_Id == 1; else user2" class="col-10 mb-1 small" style="text-align: right">{{msg.content}}</div>
+        <ng-template #user2>
+          <div class="col-10 mb-1 small" style="text-align: left">{{msg.content}}</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+  <form (submit)="submit()">
+    <input class="form-control" placeholder="Write a message" [value]="content"
+    (change)="content = $event.target.value"  />
+  </form>
+</div>

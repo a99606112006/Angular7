@@ -1,0 +1,46 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="Id" [value]="service.formData.Id">
+  <div class="form-group">
+    <div class="input-group">
+
+      <input name="Question" #Q="ngModel" [(ngModel)]="service.formData.Q" class="form-control"
+        placeholder="Your Question" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+
+      <input name="Question" #A1="ngModel" [(ngModel)]="service.formData.A1" class="form-control"
+        placeholder="Your Question" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+
+      <input name="Question" #A2="ngModel" [(ngModel)]="service.formData.A2" class="form-control"
+        placeholder="Your Question" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+
+      <input name="Question" #A3="ngModel" [(ngModel)]="service.formData.A3" class="form-control"
+        placeholder="Your Question" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+
+      <input name="Question" #A3="ngModel" [(ngModel)]="service.formData.Ca" class="form-control"
+        placeholder="Your Question" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid"><i class="fas fa-database"></i> Submit</button>
+  </div>
+</form>

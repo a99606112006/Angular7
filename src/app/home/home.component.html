@@ -1,0 +1,58 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand text-white">ininDer</a>
+  <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav>
+
+<table class="table table-hover">
+  <tr *ngFor="let pf of service2.list">
+    <td (click)="populateForm(pf)">{{pf.q}}</td>
+    <td (click)="populateForm(pf)">{{pf.a1}}</td>
+    <td (click)="populateForm(pf)">{{pf.a2}}</td>
+    <td (click)="populateForm(pf)">{{pf.a3}}</td>
+    <td (click)="populateForm(pf)">{{pf.ca}}</td>
+
+  </tr>
+</table>
+
+<!-- random  option logic tbd to fix
+
+<table class="table table-hover">
+  <tr *ngFor="let pf of service.list">
+    <div *ngIf="randomMath()===0">
+    <td (click)="populateForm(pd)">{{pf.q}}</td>
+    <td (click)="populateForm(pd)">{{pf.a1}}</td>
+    <td (click)="populateForm(pd)">{{pf.a2}}</td>
+    <td (click)="populateForm(pd)">{{pf.a3}}</td>
+    <td (click)="populateForm(pd)">{{pf.ca}}</td>
+    </div>
+
+    <div *ngIf="randomMath()===1">
+      <td (click)="populateForm(pd)">{{pf.q}}</td>
+      <td (click)="populateForm(pd)">{{pf.ca}}</td>
+      <td (click)="populateForm(pd)">{{pf.a1}}</td>
+      <td (click)="populateForm(pd)">{{pf.a2}}</td>
+      <td (click)="populateForm(pd)">{{pf.a3}}</td>
+
+      </div>
+
+      <div *ngIf="randomMath()===2">
+        <td (click)="populateForm(pd)">{{pf.q}}</td>
+        <td (click)="populateForm(pd)">{{pf.a1}}</td>
+        <td (click)="populateForm(pd)">{{pf.ca}}</td>
+        <td (click)="populateForm(pd)">{{pf.a2}}</td>
+        <td (click)="populateForm(pd)">{{pf.a3}}</td>
+
+        </div>
+
+        <div *ngIf="randomMath()===3">
+          <td (click)="populateForm(pd)">{{pf.q}}</td>
+          <td (click)="populateForm(pd)">{{pf.a1}}</td>
+          <td (click)="populateForm(pd)">{{pf.a2}}</td>
+          <td (click)="populateForm(pd)">{{pf.ca}}</td>
+          <td (click)="populateForm(pd)">{{pf.a3}}</td>
+
+          </div>
+  </tr>
+</table>
+
+-->
